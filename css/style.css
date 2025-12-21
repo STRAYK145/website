@@ -102,3 +102,39 @@
     border-color: #000;
     /* появляется только цвет */
 }
+
+#scrollToTop {
+    position: fixed;
+    bottom: 30px;
+    right: 180px; /* ← кнопка левее */
+    width: 50px;
+    height: 50px;
+    border: none;
+    border-radius: 50%;
+    background-color: #212529;
+    color: #fff;
+    cursor: pointer;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    z-index: 1000;
+
+    /* Анимация */
+    opacity: 0;
+    transform: translateY(100px);
+    pointer-events: none;
+    transition: opacity 0.4s ease, transform 0.4s ease;
+}
+
+#scrollToTop.show {
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto;
+}
+
+#scrollToTop:hover {
+    transform: translateY(0) scale(1.1);
+}
