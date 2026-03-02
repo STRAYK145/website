@@ -223,6 +223,9 @@
                 "Это направление идеально подходит под ваши предпочтения и стиль отдыха.";
             document.getElementById("place-reason").innerText =
                 "Вы выбрали ответы, которые больше всего соответствуют особенностям этого региона.";
+            if (typeof ym === 'function') {
+                ym(107080210, 'reachGoal', 'rezultat');
+            }
         }
 
         loadQuestion();
